@@ -19,6 +19,14 @@ First things first, I want to convert those data into their appropriate types to
 
 Later, I'll build a new database aligned with those data types and use the transformed data to seed the database.  
 
+**Update:** *Nov 27, 2022:* 
+
+* Local database created and seeded with transformed data.   
+
+![seeded_database](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/seeded_database "seeded_database")
+
+Next, I'll migrate the local database to Azure. 
+
 Finally, I'll build a UI. 
 
 ## Background
@@ -43,6 +51,8 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 * Created a local database and table via SQL Server Management Studio 
 
 ![sql_table](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/sql_table.jpg "sql_table.jpg")
+
+* Created and seeded a local database. 
 
 ### November 26, 2022
 
