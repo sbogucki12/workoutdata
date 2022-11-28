@@ -23,7 +23,7 @@ Later, I'll build a new database aligned with those data types and use the trans
 
 * Local database created and seeded with transformed data.   
 
-![seeded_database](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/seeded_database "seeded_database")
+![seeded_database](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/seeded_database.jpg "seeded_database")
 
 Next, I'll migrate the local database to Azure. 
 
