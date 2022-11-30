@@ -27,6 +27,8 @@ Later, I'll build a new database aligned with those data types and use the trans
 
 Next, I'll migrate the local database to Azure. 
 
+After that, I'll build out a backend - just some controllers, basically, via .NET probably. 
+
 Finally, I'll build a UI. 
 
 ## Background
@@ -41,6 +43,14 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
   * [folder](https://github.com/sbogucki12/workoutdata/tree/main/.ipynb_checkpoints)
 
 # Progress...
+
+### November 29, 2022
+
+* Working on migrating local SQL Server database to Azure
+
+  * Downloaded Azure Data Migration Assistant to assess the local database
+  * Spun up a database on Azure
+  * Experiencing a ton of difficulty with my Azure profile, making connecting to resources truly frustrating. Toubleshooting...
 
 ### November 27, 2022
 
