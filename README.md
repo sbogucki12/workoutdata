@@ -29,7 +29,7 @@ Next, I'll migrate the local database to Azure.
 
 **Update:** *Nov. 29, 2022:*
 
-![azure_sql_deploy](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/azure_sql_deployjpg "Migrated to Azure SQL")
+![azure_sql_deploy](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/azure_sql_deploy.jpg "Migrated to Azure SQL")
 
 After that, I'll build out a backend - just some controllers, basically, via .NET probably. 
 
