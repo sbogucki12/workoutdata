@@ -27,6 +27,10 @@ Later, I'll build a new database aligned with those data types and use the trans
 
 Next, I'll migrate the local database to Azure. 
 
+**Update:** *Nov. 29, 2022:*
+
+![azure_sql_deploy](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/azure_sql_deployjpg "Migrated to Azure SQL")
+
 After that, I'll build out a backend - just some controllers, basically, via .NET probably. 
 
 Finally, I'll build a UI. 
@@ -51,6 +55,8 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
   * Downloaded Azure Data Migration Assistant to assess the local database
   * Spun up a database on Azure
   * Experiencing a ton of difficulty with my Azure profile, making connecting to resources truly frustrating. Toubleshooting...
+
+* Successfully migrated to Azure SQL. 
 
 ### November 27, 2022
 
