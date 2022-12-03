@@ -27,6 +27,7 @@ Later, I'll build a new database aligned with those data types and use the trans
 
 Next, I'll migrate the local database to Azure. 
 
+<<<<<<< HEAD
 **Update:** *Nov. 29, 2022:*
 
 * Migrated to Azure SQL. 
@@ -35,6 +36,8 @@ Next, I'll migrate the local database to Azure.
 
 After that, I'll build out a backend - just some controllers, basically, via .NET probably. 
 
+=======
+>>>>>>> parent of 4a2c516 (migrating database to azure)
 Finally, I'll build a UI. 
 
 ## Background
@@ -50,6 +53,7 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+<<<<<<< HEAD
 ### November 29, 2022
 
 * Working on migrating local SQL Server database to Azure
@@ -60,6 +64,8 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 * Successfully migrated to Azure SQL. 
 
+=======
+>>>>>>> parent of 4a2c516 (migrating database to azure)
 ### November 27, 2022
 
 * Transformed data into usable data types
