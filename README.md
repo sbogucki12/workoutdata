@@ -15,30 +15,15 @@ In laziness, when initially developing my runlog two years ago, I wasn't precise
 
 ![data-problem-pace.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/data-problem-pace.jpg "data-problem-pace.jpg")
 
-First things first, I want to convert those data into their appropriate types to allow me to perform some data analysis. 
+1. First things first, I want to convert those data into their appropriate types to allow me to perform some data analysis. (DONE)
 
-Later, I'll build a new database aligned with those data types and use the transformed data to seed the database.  
+2. Later, I'll build a new database aligned with those data types and use the transformed data to seed the database. (DONE) 
 
-**Update:** *Nov 27, 2022:* 
+3. Next, I'll migrate the local database to Azure. (DONE) 
 
-* Local database created and seeded with transformed data.   
+4. After that, I'll build out a backend - just some controllers, basically, via .NET probably. (DONE)
 
-![seeded_database](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/seeded_database.jpg "seeded_database")
-
-Next, I'll migrate the local database to Azure. 
-
-<<<<<<< HEAD
-**Update:** *Nov. 29, 2022:*
-
-* Migrated to Azure SQL. 
-
-![azure_sql_deploy](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/azure_sql_deploy.jpg "Migrated to Azure SQL")
-
-After that, I'll build out a backend - just some controllers, basically, via .NET probably. 
-
-=======
->>>>>>> parent of 4a2c516 (migrating database to azure)
-Finally, I'll build a UI. 
+5. Finally, I'll build a UI. 
 
 ## Background
 
@@ -53,8 +38,18 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
-<<<<<<< HEAD
+### December 4, 2022
+
+* Wired Azure db to .NET Web API
+
+![api_get_runs](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/aapi_get_runs.jpg.jpg "api_get_runs.jpg")
+
+
 ### November 29, 2022
+
+* Migrated to Azure SQL. 
+
+![azure_sql_deploy](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/azure_sql_deploy.jpg "Migrated to Azure SQL")
 
 * Working on migrating local SQL Server database to Azure
 
@@ -64,9 +59,12 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 * Successfully migrated to Azure SQL. 
 
-=======
->>>>>>> parent of 4a2c516 (migrating database to azure)
 ### November 27, 2022
+
+* Local database created and seeded with transformed data.   
+
+![seeded_database](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/seeded_database.jpg "seeded_database")
+
 
 * Transformed data into usable data types
 
