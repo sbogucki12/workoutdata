@@ -42,7 +42,7 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 * Wired Azure db to .NET Web API
 
-![api_get_runs](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/aapi_get_runs.jpg.jpg "api_get_runs.jpg")
+![api_get_runs](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/api_get_runs.jpg "api_get_runs.jpg")
 
 
 ### November 29, 2022
