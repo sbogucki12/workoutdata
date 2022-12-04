@@ -8,10 +8,6 @@ namespace runlog2023.Controllers
     [Route("[controller]")]
     public class RunController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
         private readonly ILogger<RunController> _logger;
 
@@ -24,8 +20,8 @@ namespace runlog2023.Controllers
         public IEnumerable<Run> Get()
         {
             var runs = new List<Run>();
-            //to get the connection string 
-            string connectionString = "Data Source=tcp:todos2020.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Initial Catalog=runlog2023; User Id=*******; Password=************";
+            
+            string connectionString = "Data Source=tcp:todos2020.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Initial Catalog=runlog2023; User Id=****; Password=*****";
             //build the sqlconnection and execute the sql command
             
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -64,17 +60,5 @@ namespace runlog2023.Controllers
             }
             return runs;            
         }
-
-        //[HttpGet(Name = "GetWeatherForecast")]
-        //public IEnumerable<WeatherForecast> Get()
-        //{
-        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        //    {
-        //        Date = DateTime.Now.AddDays(index),
-        //        TemperatureC = Random.Shared.Next(-20, 55),
-        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        //    })
-        //    .ToArray();
-        //}
     }
 }
