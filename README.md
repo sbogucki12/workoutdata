@@ -41,8 +41,11 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 ### Decenber 8, 2022
 
 * Data passing from browser to Post method in API. 
+   * Currently just passes the Run object back.  
+
 ![postRunApiGetIndex.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/postRunApiGetIndex.jpg "postRunApiGetIndex.jpg")
 ![postRunApiPost.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/postRunApiPost.jpg "postRunApiPost.jpg")
+![postRunApiResponse.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/postRunApiResponse.jpg "postRunApiResponse.jpg")
 
 
 ### December 4, 2022
