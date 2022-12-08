@@ -38,6 +38,13 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+### Decenber 8, 2022
+
+* Data passing from browser to Post method in API. 
+![postRunApiGetIndex.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/postRunApiGetIndex.jpg "postRunApiGetIndex.jpg")
+![postRunApiPost.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/postRunApiPost.jpg "postRunApiPost.jpg")
+
+
 ### December 4, 2022
 
 * Wired Azure db to .NET Web API
