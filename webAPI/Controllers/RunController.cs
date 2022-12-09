@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using runlog2023.models;
+using System;
+using System.Data;
+using System.Reflection;
 
 namespace runlog2023.Controllers
 {
@@ -29,13 +32,10 @@ namespace runlog2023.Controllers
                 try
                 {
                     var user = this._configuration["user"];
-                    var password = this._configuration["password"];
-
-
-                    List<Run> runs = new List<Run>();
+                    var password = this._configuration["password"];                    
                     string connectionString = $"Data Source=tcp:todos2020.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Initial Catalog=runlog2023; User Id={user}; Password={password}";
-                    //build the sqlconnection and execute the sql command
-
+                    
+                    List<Run> runs = new List<Run>();
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
@@ -93,38 +93,57 @@ namespace runlog2023.Controllers
         [Route("PostRun")]
         public IActionResult PostRun(string pw, Run data)
         {
-            var auth = new Auth(_configuration).CheckAuth(pw);         
-
             
-            if (auth)
+            try
             {
-                Run run = new Run()
+                var auth = new Auth(_configuration).CheckAuth(pw);
+                var user = this._configuration["user"];
+                var password = this._configuration["password"];
+                string connectionString = $"Data Source=tcp:todos2020.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Initial Catalog=runlog2023; User Id={user}; Password={password}";
+                string commandtext = "INSERT INTO [bogoodski].[runlog_data]([index], runId, date, duration, length, type, surface, pace, sleepHours, sleepToBedTime, sleepWakeTime, runListenedTo, temperature, shoeAge, startTime) VALUES (@index, @runId, @date, @duration, @length, @type, @surface, @pace, @sleepHours, @sleepToBedTime, @sleepWakeTime, @runListenedTo, @temperature, @shoeAge, @startTime)";
+
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(commandtext, conn))
                 {
-                    index = data.index,
-                    runId = data.runId,
-                    date = data.date,
-                    duration = data.duration,
-                    length = data.length,
-                    type = data.type,
-                    surface = data.surface,
-                    pace =  data.pace,
-                    sleepHours = data.sleepHours,
-                    sleepToBedTime = data.sleepToBedTime,
-                    sleepWakeTime = data.sleepWakeTime,
-                    runListenedTo = data.runListenedTo,
-                    temperature = data.temperature,
-                    shoeAge = data.shoeAge,
-                    startTime = data.startTime,
-    };
-                return Ok(run);
+                    if (auth)
+                    {
+                        //TODO: THIS COMMAND IS THROWING AN EXCEPTION
+                        //string commandtext = $"INSERT INTO [bogoodski].[runlog_data] ([index], runId, date, duration, length, type, surface, pace, sleepHours, sleepToBedTime, sleepWakeTime, runListenedTo, temperature, shoeAge, startTime) VALUES ({data.index}, {data.runId}, {data.date.ToString()}, {data.duration.ToString()}, {data.length}, {data.type}, {data.surface}, {data.pace.ToString()}, {data.sleepHours.ToString()}, {data.sleepToBedTime.ToString()}, {data.sleepWakeTime.ToString()}, {data.runListenedTo}, {data.temperature}, {data.shoeAge}, {data.startTime.ToString()});";
+                        cmd.Parameters.Add("@index", SqlDbType.BigInt).Value = data.index;
+                        cmd.Parameters.Add("@runId", SqlDbType.BigInt).Value = data.runId;
+                        cmd.Parameters.Add("@date", SqlDbType.DateTime).Value = data.date.ToString();
+                        cmd.Parameters.Add("@duration", SqlDbType.DateTime).Value = data.duration.ToString();
+                        cmd.Parameters.Add("@length", SqlDbType.Float).Value = data.length;
+                        cmd.Parameters.Add("@type", SqlDbType.VarChar).Value = data.type;
+                        cmd.Parameters.Add("@surface", SqlDbType.VarChar).Value = data.surface;
+                        cmd.Parameters.Add("@pace", SqlDbType.DateTime).Value = data.pace.ToString();
+                        cmd.Parameters.Add("@sleepHours", SqlDbType.Float).Value = data.sleepHours;
+                        cmd.Parameters.Add("sleepToBedTime", SqlDbType.DateTime).Value = data.sleepToBedTime.ToString();
+                        cmd.Parameters.Add("sleepWakeTime", SqlDbType.DateTime).Value = data.sleepWakeTime.ToString();
+                        cmd.Parameters.Add("@runListenedTo", SqlDbType.VarChar).Value = data.runListenedTo;
+                        cmd.Parameters.Add("@temperature", SqlDbType.Float).Value = data.temperature;
+                        cmd.Parameters.Add("@shoeAge", SqlDbType.BigInt).Value = data.shoeAge;
+                        cmd.Parameters.Add("@startTime", SqlDbType.DateTime).Value = data.startTime.ToString();
+
+
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        return Ok(data); 
+                    }
+                    else
+                    {
+                        return Forbid();
+                    }
+                };
             }
-            else
+            catch (Exception ex) 
             {
-                return Forbid();
+                return NotFound(ex);
             }
         }
-
-
-
     }
 }
