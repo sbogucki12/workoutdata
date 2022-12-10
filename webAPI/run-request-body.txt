@@ -1,0 +1,22 @@
+INSERT INTO [bogoodski].[runlog_data] ([index], runId, date, duration, length, type, surface, pace, sleepHours, sleepToBedTime, sleepWakeTime, runListenedTo, temperature, shoeAge, startTime)
+VALUES (1265, 1328, '2022-12-08 00:00:00.000', '1900-01-01 00:20:56.000', 2.81, 'outdoor', 'street', '1900-01-01 00:07:27.000', 6.5, '1900-01-01 00:00:00.000', '1900-01-01 06:30:00.000', 'none', 47, 18, '1900-01-01 07:30:00.000');
+
+
+{
+  "index": 1265,
+  "runId": 1328,
+  "date": "2022-12-08T00:00:00",
+  "duration": "1900-01-01T00:20:56",
+  "length": 2.81,
+  "type": "outdoor",
+  "surface": "street",
+  "pace": "1900-01-01T00:07:27",
+  "sleepHours": 6.5,
+  "sleepToBedTime": "1900-01-01T00:00:00",
+  "sleepWakeTime": "1900-01-01T06:30:00",
+  "runListenedTo": "none",
+  "temperature": 47,
+  "shoeAge": 18,
+  "startTime": "1900-01-01T07:30:00"
+}
+

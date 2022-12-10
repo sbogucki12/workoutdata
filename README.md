@@ -38,6 +38,11 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 9, 200
+
+* I'm way too excited about this, but I wired this up the UI intending not to use any frameworks. #vanilla. 
+![vanilla.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/vanilla.jpg "vanilla.jpg")
+
 ### Decenber 8, 2022
 
 * Data passing from browser (Swagger) via API POST to database on Azure (via ADO.NET)
