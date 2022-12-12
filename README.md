@@ -38,6 +38,11 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 11, 2002: 
+
+* Sidetracked. What of the week did I run the most often? 
+![daily-frequency](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/daily-frequency.jpg "daily-frequency.jpg")
+
 ## December 9, 2022
 
 * I'm way too excited about this, but I wired this up the UI intending not to use any frameworks. #vanilla. 
