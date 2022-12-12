@@ -38,7 +38,14 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
-## December 11, 2002: 
+## December 12, 2022: 
+
+* Sidetracked. 
+  * Which day of the week do I typically run the farthest? 
+  * How have my distances changed over time?  
+![runDistances](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/runDistances.jpg "runDistances.jpg")
+
+## December 11, 2022: 
 
 * Sidetracked. What day of the week did I run the most often? 
 ![daily-frequency](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/daily-frequency.jpg "daily-frequency.jpg")

@@ -1,0 +1,22 @@
+{
+  "name": "runlog2023",
+  "version": "0.0.1",
+  "description": "Rebuild of Bogoodski's Run Log.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "running",
+    "runner",
+    "run",
+    "log",
+    "runlog",
+    "runstreak",
+    "run",
+    "streak",
+    "fitness"
+  ],
+  "author": "Steve Bogucki",
+  "license": "ISC"
+}
