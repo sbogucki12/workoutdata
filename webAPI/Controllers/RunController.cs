@@ -14,25 +14,49 @@ namespace runlog2023.Controllers
     {
         private readonly ILogger<RunController> _logger;
         private readonly IConfiguration _configuration;
+        private readonly IWebHostEnvironment _currentEnvironment;
 
-        public RunController(ILogger<RunController> logger, IConfiguration configuration)
+        public RunController(ILogger<RunController> logger, IConfiguration configuration, IWebHostEnvironment env)
         {
             _logger = logger;
             _configuration = configuration;
+            _currentEnvironment = env;
         }
 
         [HttpPost]
         [Route("GetRuns")]
         public IActionResult GetRuns([FromBody]string pw, int numberOfRuns)
         {
-            var auth = new Auth(_configuration).CheckAuth(pw);
+            bool auth = false; 
+            if(_currentEnvironment.EnvironmentName == "Development")
+            {
+                auth = new Auth(_configuration).CheckAuth(pw);
+            }
+
+            if(_currentEnvironment.EnvironmentName == "Production")
+            {
+                auth = new Auth(_configuration).CheckAuth(pw);
+            }
+            
             
             if (auth)
             {
                 try
                 {
-                    var user = this._configuration["user"];
-                    var password = this._configuration["password"];                    
+                    string user = "";
+                    string password = "";
+                    if (_currentEnvironment.EnvironmentName == "Development")
+                    {
+                        user = this._configuration["user"];
+                        password = this._configuration["password"];
+                    }
+
+                    if (_currentEnvironment.EnvironmentName == "Production")
+                    {
+                        user = "";
+                        password = "";
+                    }
+                                   
                     string connectionString = $"Data Source=tcp:todos2020.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Initial Catalog=runlog2023; User Id={user}; Password={password}";
                     
                     List<Run> runs = new List<Run>();
@@ -95,10 +119,21 @@ namespace runlog2023.Controllers
         {
             
             try
-            {
+            {                
                 var auth = new Auth(_configuration).CheckAuth(pw);
-                var user = this._configuration["user"];
-                var password = this._configuration["password"];
+                string user = "";
+                string password = "";
+                if (_currentEnvironment.EnvironmentName == "Development")
+                {
+                    user = this._configuration["user"];
+                    password = this._configuration["password"];
+                }
+
+                if (_currentEnvironment.EnvironmentName == "Production")
+                {
+                    user = "";
+                    password = "";
+                }
                 string connectionString = $"Data Source=tcp:todos2020.database.windows.net; Authentication=Active Directory Password; Encrypt=True; Initial Catalog=runlog2023; User Id={user}; Password={password}";
                 string commandtext = "INSERT INTO [bogoodski].[runlog_data]([index], runId, date, duration, length, type, surface, pace, sleepHours, sleepToBedTime, sleepWakeTime, runListenedTo, temperature, shoeAge, startTime) VALUES (@index, @runId, @date, @duration, @length, @type, @surface, @pace, @sleepHours, @sleepToBedTime, @sleepWakeTime, @runListenedTo, @temperature, @shoeAge, @startTime)";
 

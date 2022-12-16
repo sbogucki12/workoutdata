@@ -38,6 +38,10 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 15, 2022: 
+
+* Added some environment checks in the run controller. 
+
 ## December 12, 2022: 
 
 * Sidetracked. 
