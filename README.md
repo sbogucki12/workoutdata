@@ -38,6 +38,10 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 16, 2022: 
+
+* Formatted run data for display.  
+
 ## December 15, 2022: 
 
 * Added some environment checks in the run controller. 

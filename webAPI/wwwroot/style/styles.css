@@ -12,6 +12,10 @@
 
 }
 
+#table--row--cell {
+    background-color: red;
+}
+
 /* table style - Begin */
 
 /* table style - End */
