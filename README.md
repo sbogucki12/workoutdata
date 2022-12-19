@@ -38,6 +38,11 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 19, 2022: 
+
+* Test button in UI now fetches data from development API.
+  * TO DO: Move fetch to load on document ready and populate table 
+
 ## December 16, 2022: 
 
 * Formatted run data for display.  

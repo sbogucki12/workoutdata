@@ -27,6 +27,7 @@ namespace runlog2023.Controllers
         [Route("GetRuns")]
         public IActionResult GetRuns([FromBody]string pw, int numberOfRuns)
         {
+            
             bool auth = false; 
             if(_currentEnvironment.EnvironmentName == "Development")
             {
