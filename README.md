@@ -40,8 +40,8 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 ## December 19, 2022: 
 
-* Test button in UI now fetches data from development API.
-  * TO DO: Move fetch to load on document ready and populate table 
+* The UI now fetches data from the cloud database via (development) Web API 
+![ui-fetch-gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/ui-fetch-gif "ui-fetch-gif")
 
 ## December 16, 2022: 
 

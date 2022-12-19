@@ -64,7 +64,7 @@ namespace runlog2023.Controllers
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
-                        string commandtext = $"SELECT TOP {numberOfRuns} * FROM [bogoodski].[runlog_data]";
+                        string commandtext = $"SELECT TOP {numberOfRuns} * FROM [bogoodski].[runlog_data] ORDER BY runId DESC";
 
                         SqlCommand cmd = new SqlCommand(commandtext, conn);
 

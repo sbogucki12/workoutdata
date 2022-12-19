@@ -1,10 +1,7 @@
 ﻿
 /* index.html style - Begin */
 .index--main {
-    background-color: #EAF0F6;
-    color: #33475B;
-    border: 3px solid #00A4BD;
-    padding: 5px;
+
 }
 
 /* index.html style - End */
@@ -13,7 +10,7 @@
 }
 
 #table--row--cell {
-    background-color: red;
+ 
 }
 
 /* table style - Begin */
