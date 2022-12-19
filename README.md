@@ -41,7 +41,7 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 ## December 19, 2022: 
 
 * The UI now fetches data from the cloud database via (development) Web API 
-![ui-fetch-gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/ui-fetch-gif "ui-fetch-gif")
+![ui-fetch-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/ui-fetch-gif.gif "ui-fetch-gif.gif")
 
 ## December 16, 2022: 
 
