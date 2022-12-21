@@ -38,6 +38,10 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 20, 2022: 
+
+* Set up some basic HTML pages for the UI
+
 ## December 19, 2022: 
 
 * The UI now fetches data from the cloud database via (development) Web API 

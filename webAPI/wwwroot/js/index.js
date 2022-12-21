@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $.getJSON("./secret.json").then((secret) => {
+    $.getJSON("../secret.json").then((secret) => {
         data = JSON.stringify(secret);
         token = data.slice(13, 25);
 

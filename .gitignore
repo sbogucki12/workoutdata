@@ -5,6 +5,7 @@
 
 
 ./webAPI/wwwroot/secret.json
+./webAPI/wwwroot/pages/secret.json
 secret.json
 
 
