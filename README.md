@@ -38,6 +38,11 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+## December 21, 2022: 
+
+* Adding functionality to the UI.  (Slowly...)
+![log-addrun-to-console.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/log-addrun-to-console.gif "log-addrun-to-console.gif")
+
 ## December 20, 2022: 
 
 * Set up some basic HTML pages for the UI

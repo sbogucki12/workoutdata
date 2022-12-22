@@ -8,7 +8,7 @@
     <div>
         <h1>Add a Run</h1>
         <div>
-            <form>
+            <form id="form" action="javascript:post()">
                 <label for="date">Date:</label><br>
                 <input type="date" id="date" name="date"><br>
 
@@ -16,7 +16,7 @@
                 <input type="number" id="length" name="length"><br>
 
                 <label for="duration">Duration:</label><br>
-                <input type="time" id="duration" name="duration"><br>
+                <input type="time" id="duration" name="duration" value="00:00:00" step="1"><br>
 
                 <label for="surface">Surface:</label><br>
                 <input type="text" id="surface" name="surface"><br>
@@ -29,9 +29,16 @@
                 <input type="datetime-local" id="bedtime" name="bedtime"><br>
                 <label for="wakeup">Sunrise:</label><br>
                 <input type="datetime-local" id="wakeup" name="wakeup"><br>
+                <br />
+                <input type="submit" value="Submit" >
             </form>
         </div>
         <a href="../../index.html"><button>Home</button></a>
+        <link rel="stylesheet" href="../../style/styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+                integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+                crossorigin="anonymous"></script>
+        <script src="../../js/admin.js"></script>
     </div>
 </body>
 </html>
