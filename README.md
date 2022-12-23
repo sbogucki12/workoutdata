@@ -38,6 +38,12 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+# December 22, 2022: 
+
+* Data from UI (hardcoded for now) posts to cloud database via .NET webAPI
+![log-add-run-to-database-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/log-add-run-to-database-gif.gif "log-add-run-to-database-gif.gif")
+
+
 ## December 21, 2022: 
 
 * Adding functionality to the UI.  (Slowly...)

@@ -116,12 +116,12 @@ namespace runlog2023.Controllers
 
         [HttpPost]
         [Route("PostRun")]
-        public IActionResult PostRun(string pw, Run data)
+        public IActionResult PostRun([FromBody]RunWithAuth data)
         {
             
             try
             {                
-                var auth = new Auth(_configuration).CheckAuth(pw);
+                var auth = new Auth(_configuration).CheckAuth(data.pw);
                 string user = "";
                 string password = "";
                 if (_currentEnvironment.EnvironmentName == "Development")
