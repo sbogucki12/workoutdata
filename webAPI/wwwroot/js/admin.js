@@ -1,28 +1,45 @@
 ﻿function post() {
     $.getJSON("../secret.json").then((secret) => {
-        pw = JSON.stringify(secret);
-        token = pw.slice(13, 25);
+        pword = JSON.stringify(secret);
+        token = pword.slice(13, 25);
+        
+        let pw = token; 
+        let index = 1270; 
+        let runId = 1333; 
+        let date = document.getElementById("date").value + "T00:00:00";
+        let duration = "1900-01-01T" + document.getElementById("duration").value;
+        let length = parseInt(document.getElementById("length").value);
+        let type = "outdoor";
+        let surface = document.getElementById("surface").value;
+        let pace = "1900-01-01T00:07:31";
+        let sleepHours = 6; 
+        let sleepToBedTime = "1900-01-01T" + document.getElementById("bedtime").value;
+        let sleepWakeTime = "1900-01-01T" + document.getElementById("wakeup").value;
+        let runListenedTo = "none";
+        let temperature = 50; 
+        let shoeAge = 22; 
+        let startTime = "1900-01-01T" +"06:30:00";
 
         let data = {
-            "pw": token,
-            "index": 1269,
-            "runId": 1332,
-            "date": "2022-12-22T00:00:00",
-            "duration": "1900-01-01T01:34:35",
-            "length": 12.56,
-            "type": "outdoor",
-            "surface": "street",
-            "pace": "1900-01-01T00:07:31",
-            "sleepHours": 5,
-            "sleepToBedTime": "1900-01-01T00:00:00",
-            "sleepWakeTime": "1900-01-01T05:00:00",
-            "runListenedTo": "none",
-            "temperature": 50,
-            "shoeAge": 22,
-            "startTime": "1900-01-01T06:00:00"
+            "pw": pw,
+            "index": index,
+            "runId": runId,
+            "date": date,
+            "duration": duration,
+            "length": length,
+            "type": type,
+            "surface": surface,
+            "pace": pace,
+            "sleepHours": sleepHours,
+            "sleepToBedTime": sleepToBedTime,
+            "sleepWakeTime": sleepWakeTime,
+            "runListenedTo": runListenedTo,
+            "temperature": temperature,
+            "shoeAge": shoeAge,
+            "startTime": startTime
         }
 
-        fetch('https://localhost:7002/Run/PostRun', {
+       fetch('https://localhost:7002/Run/PostRun', {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             headers: {
                 'Accept': '*/*',
@@ -42,34 +59,3 @@
         })
     })
 }
-
-
-
-
-    //date = $("#date").val();
-    //length = $("#length").val();
-    //duration = $("#duration").val();
-    //surface = $("#surface").val();
-    //outdoor = $("#outdoor").val();
-    //bedtime = $("#bedtime").val();
-    //wakeup = $("#wakeup").val();
-    //data = {
-    //    "date": date,
-    //    "length": length,
-    //    "duration": duration,
-    //    "surface": surface,
-    //    "outdoor": outdoor,
-    //    "bedtime": bedtime,
-    //    "wakeup": wakeup
-    //};
-
-
-
-
-
-//    for (let [key, value] of data) {
-
-//        console.log(value);
-//    }
-
-
