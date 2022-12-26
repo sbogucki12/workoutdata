@@ -54,14 +54,13 @@ function post() {
     let length = document.getElementById("length").value;
     let runningEnv = "outdoor";
     let surface = document.getElementById("surface").value;
-    let pace = "1900-01-01T00:07:31";
-    let sleepHours = 6;
+    let pace = "1900-01-01T00:07:31";    
     let sleepToBedTime = "1900-01-01T" + document.getElementById("bedtime").value;
     let sleepWakeTime = "1900-01-01T" + document.getElementById("wakeup").value;
     let runListenedTo = "none";
     let temperature = 50;
     let shoeAge = 22;
-    let startTime = "1900-01-01T" + "06:30:00";
+    let startTime = "1900-01-01T" + document.getElementById("starttime").value;;
 
     if (!document.getElementById("outdoor").checked) {
         runningEnv = 'indoor'
@@ -72,15 +71,12 @@ function post() {
     var bedtime = Date.parse("01 JAN 1970 " + document.getElementById("bedtime").value + ":00 GMT");
     var totalsleep = wakeup - bedtime; 
 
-    function msToTime(duration) {
-        var milliseconds = Math.floor((duration % 1000) / 100),
-            seconds = Math.floor((duration / 1000) % 60),
-            minutes = Math.floor((duration / (1000 * 60)) % 60),
+    function msToTime(duration) {            
+            var minutes = Math.floor((duration / (1000 * 60)) % 60),
             hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
         hours = (hours < 10) ? "0" + hours : hours;
-        minutes = (minutes < 10) ? "0" + minutes : minutes;
-        seconds = (seconds < 10) ? "0" + seconds : seconds;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;        
 
         return hours + ":" + minutes;
     }
@@ -88,9 +84,11 @@ function post() {
     sleepHoursSpan = document.getElementById("totalsleephours");
     hoursdisplay = msToTime(totalsleep);
     sleepHoursSpan.append(hoursdisplay);
-    //TO DO: CONVERT SLEEPING TIMES
-    //WAKE UP: TIME + 24
-    //TOTAL SLEEP: WAKE UP - BED TIME
+    hour = hoursdisplay.slice(0, 2)
+    minutes = hoursdisplay.slice(3, 5);
+    sleepHours = hour + "." + minutes; 
+    time = sleepHours;  
+    
 
     var type = runningEnv;
 

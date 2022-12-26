@@ -38,6 +38,14 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+# December 26, 2022: 
+
+* Subtle but essential functionality added to run form: 
+  * Display current shoe age
+  * Auto increment index of new run
+  * Calculate total hours of sleep 
+![runform_functionality-gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/runform_functionality-gif.gif "runform_functionality-gif.gif")
+
 # December 23, 2022: 
 
 * Data from UI posts to cloud database via .NET webAPI
