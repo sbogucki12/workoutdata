@@ -19,5 +19,12 @@
 
 
 /* addrun style - Begin */
+#length {
+    width: 80px;
+}
+
+#shoeAge {
+    width: 40px;
+}
 
 /* addrun style - End */

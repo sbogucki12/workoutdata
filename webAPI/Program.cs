@@ -26,12 +26,13 @@ app.UseFileServer();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();   
+    app.UseSwaggerUI();
+    app.UseCors(myAllowAllOrigins);
+
 }
 
 app.UseHttpsRedirection();
 
-app.UseCors(myAllowAllOrigins);
 
 app.UseAuthorization();
 
