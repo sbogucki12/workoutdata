@@ -40,6 +40,9 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # December 26, 2022: 
 
+* Playing around with style: 
+![addrun-style-12262022.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/addrun-style-12262022.jpg "addrun-style-12262022.jpg")
+
 * Subtle but essential functionality added to run form: 
   * Display current shoe age
   * Auto increment index of new run

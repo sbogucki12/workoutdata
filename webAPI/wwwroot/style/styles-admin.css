@@ -1,0 +1,83 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway&display=swap');
+
+/* addrun style - Begin */
+#length {
+    width: 80px;
+}
+
+#shoeAge {
+    width: 40px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: url(../media/bg-longbeach.jpg) no-repeat center center/ cover;
+    background-attachment: fixed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0b052f;
+    width: 90vw;
+    color: aquamarine;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    align-items: flex-start;
+    border-end-end-radius: 25px;
+}
+
+.container {
+    width: 70vw;
+    border-radius: 5%;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.8);
+    border: medium solid aquamarine;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+.container--back-button {
+    height: 5vh;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.btn--back-to-admin {
+    width: 15vw;
+    height: 80%;
+    border: 1px solid aquamarine;
+    color: #e47933;
+    border-color: #570e1c;
+    border-radius: 10px;
+    background-color: #943116;
+}
+
+.btn--back-to-admin:hover {
+    border-color: #e47933;
+    color: #0b052f;
+
+}
+
+/* addrun style - End */

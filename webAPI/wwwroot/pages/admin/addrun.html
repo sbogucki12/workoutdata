@@ -1,81 +1,98 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="stylesheet" href="../../style/styles-admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8db165ecfc.js" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <title></title>
 </head>
 <body>
-    <div>
+    <div class="header">
         <h1>Add a Run</h1>
-        <div>
-            <form id="form" action="javascript:post()">
-                <label for="date">Date:</label><br>
-                <input type="date" id="date" name="date"><br>
-                <label for="starttime">Start Time:</label><br>
-                <input type="time" id="starttime" name="starttime"><br>
-                <br />
+    </div>
+        <div class="container">            
+            <div class="form">
+                <form id="form" action="javascript:post()">
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date"><br>
+                    <label for="starttime">Start Time:</label><br>
+                    <input type="time" id="starttime" name="starttime"><br>
+                    <br />
 
-                <label for="length">Length:</label><br>
-                <input type="number"
-                       id="length"
-                       name="length"
-                       step="0.01"
-                       placeholder="12.56"><br>
+                    <label for="length">Length:</label><br>
+                    <input type="number"
+                           id="length"
+                           name="length"
+                           step="0.01"
+                           placeholder="12.56"><br>
 
-                <label for="duration">Duration:</label><br>
-                <input type="text" id="duration"
-                       name="duration"
-                       placeholder="00:00:00"
-                       autocomplete="off"
-                       onkeypress="return /[0-9\:]/i.test(event.key)"
-                       maxlength="8"
-                       size="4"><br>
+                    <label for="duration">Duration:</label><br>
+                    <input type="text" id="duration"
+                           name="duration"
+                           placeholder="00:00:00"
+                           autocomplete="off"
+                           onkeypress="return /[0-9\:]/i.test(event.key)"
+                           maxlength="8"
+                           size="4"><br>
 
-                <label for="surface">Surface:</label><br>
-                <input type="text"
-                       id="surface"
-                       name="surface"
-                       size="6"
-                       placeholder="street"><br>
+                    <label for="surface">Surface:</label><br>
+                    <input type="text"
+                           id="surface"
+                           name="surface"
+                           size="6"
+                           placeholder="street"><br>
 
-                <label for="outdoor">Outdoor?</label><br>
-                <input type="checkbox" id="outdoor" name="outdoor">
+                    <label for="outdoor">Outdoor?</label><br>
+                    <input type="checkbox" id="outdoor" name="outdoor">
 
-                <h2>Sleep</h2>
-                <label for="bedtime">🛏️:</label><br>
-                <input type="time" id="bedtime" name="bedtime"><br>
-                <label for="wakeup">🌅:</label><br>
-                <input type="time" id="wakeup" name="wakeup"><br>
-                <br />
+                    <h2>Sleep</h2>
+                    <label for="bedtime">🛏️:</label><br>
+                    <input type="time" id="bedtime" name="bedtime"><br>
+                    <label for="wakeup">🌅:</label><br>
+                    <input type="time" id="wakeup" name="wakeup"><br>
+                    <br />
 
-                <p>
-                    Sleep Hours - Total: <span id="totalsleephours"></span>
-                </p>
+                    <p>
+                        Sleep Hours - Total: <span id="totalsleephours"></span>
+                    </p>
 
-                <h2>Shoe Age</h2>
-                <p>
-                    Previous Shoe Age: <span id="previousshoeage"></span>
-                </p>
-                <label for="shoAage">Current Shoe Age:</label><br>
-                <input type="number"
-                       id="shoeAge"
-                       name="shoeAge"
-                       class="shoeAge"><br>
-                <br />
+                    <h2>Shoe Age</h2>
+                    <p>
+                        Previous Shoe Age: <span id="previousshoeage"></span>
+                    </p>
+                    <label for="shoAage">Current Shoe Age:</label><br>
+                    <input type="number"
+                           id="shoeAge"
+                           name="shoeAge"
+                           class="shoeAge"><br>
+                    <br />
 
-                <label for="date">Password:</label><br>
-                <input type="password" id="pw" name="pw"><br>
-                <br />
+                    <label for="date">Password:</label><br>
+                    <input type="password" id="pw" name="pw"><br>
+                    <br />
 
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-        <a href="../../index.html"><button>Home</button></a>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>     
         <script src="https://code.jquery.com/jquery-3.6.1.js"
                 integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
                 crossorigin="anonymous"></script>
         <script src="../../js/admin.js"></script>
     </div>
+        <div class="container--back-button">
+            
+                <button onclick="window.location.href='../admin.html';" class="btn--back-to-admin"><i class="fa-solid fa-circle-chevron-left fa-2xl"></i></button>
+            
+        </div>
 </body>
 </html>
+
+<!-- Photo by 
+    <a href="https://unsplash.com/@levanbadzgaradze?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+    Levan Badzgaradze</a> 
+    on <a href="https://unsplash.com/s/photos/sunset-long-beach?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+    Unsplash</a>
+-->
