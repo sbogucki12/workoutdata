@@ -88,3 +88,34 @@ body{
 .icon {
     font-size: 3em;
 }
+
+.admin-header {
+    width: 90vw; 
+    background-color: #dc8443;
+    color: white; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    border-end-end-radius: 25px;
+}
+
+.admin-container {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.admin-footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0; 
+    border-top: 3px solid #35cacf; 
+    width: 100vw; 
+    height: 5vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-btn--home {
+    width: 100px;
+}

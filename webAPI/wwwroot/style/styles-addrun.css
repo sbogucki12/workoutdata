@@ -89,7 +89,14 @@ body {
     color: #236f65
 }
 
-.addrun-success-container {
-    align-items: flex-start;
-    
+.addrun-success--container {
+    display: flex;
+    align-items: center;
+}
+
+.addrun-success--form {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    row-gap: 10px; 
 }
