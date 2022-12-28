@@ -44,6 +44,14 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+
+# December 28, 2022: 
+
+* Run form now redirects after successfully submitting a new run. 
+* Continuing to add styling. 
+![style-and-function-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/style-and-function-gif.gif "style-and-function-gif.gif")
+
+
 # December 27, 2022: 
 
 * Still toying around with CSS. Need to get back to adding functionality.  (Tommorow) 

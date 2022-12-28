@@ -1,5 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&display=swap');
 
 body{
     background-color: #08071f; 
@@ -11,6 +10,7 @@ body{
     min-height: 100vh; 
     align-items: center;
 }
+
 .index--main {
     background-color: #1e255c;
     border: 3px solid #000000;
@@ -19,13 +19,19 @@ body{
     box-shadow: 10px 10px 8px #000000;
 }
 
+@media (max-width: 450px) {
+    .index--main {
+        min-width: 90vw;
+    }
+}
+
 .main-menu--left {    
     width: 50%;
     display: flex;
     flex-direction: column;    
     align-items: flex-end;
     justify-content: space-evenly;
-    height: 30vh;    
+    height: 30vh; 
 }
 
 .main-menu--right {
@@ -54,6 +60,8 @@ body{
     justify-content: space-between;
     align-items:center;
     color: #22ea04;
+    flex-wrap: wrap;
+    column-gap: 2vw; 
 }
 
 .main-menu--right-top {
@@ -90,13 +98,17 @@ body{
 }
 
 .admin-header {
-    width: 90vw; 
+    width: 90vw;
     background-color: #dc8443;
-    color: white; 
+    color: #000d4b;
     position: fixed;
-    top: 0; 
-    left: 0; 
+    top: 0;
+    left: 0;
     border-end-end-radius: 25px;
+    font-family: 'Raleway', sans-serif;
+    height: 5vh;
+    display: flex; 
+    align-items: center; 
 }
 
 .admin-container {
@@ -116,6 +128,6 @@ body{
     align-items: center;
 }
 
-.admin-btn--home {
-    width: 100px;
+.admin-btn {
+    min-width: 100px;
 }
