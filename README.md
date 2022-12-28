@@ -36,7 +36,19 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 * To see code and visualizations, explore the notebooks in the .ipynb_checkpoints folder
   * [folder](https://github.com/sbogucki12/workoutdata/tree/main/.ipynb_checkpoints)
 
+## TODO
+
+[ ] - Add functionality that calculates pace
+
+[ ] - Add success/failure handling on form submit 
+
 # Progress...
+
+# December 27, 2022: 
+
+* Still toying around with CSS. Need to get back to adding functionality.  (Tommorow) 
+![main-style-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/main-style-gif.gif "main-style-gif.gif")
+
 
 # December 26, 2022: 
 

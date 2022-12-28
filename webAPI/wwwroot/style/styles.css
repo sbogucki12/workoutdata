@@ -1,20 +1,90 @@
-﻿
-/* index.html style - Begin */
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body{
+    background-color: #08071f; 
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    min-height: 100vh; 
+    align-items: center;
+}
 .index--main {
-
+    background-color: #1e255c;
+    border: 3px solid #000000;
+    min-width: 60vw;
+    min-height: 30vh;
+    box-shadow: 10px 10px 8px #000000;
 }
 
-/* index.html style - End */
-.table--main {
-
+.main-menu--left {    
+    width: 50%;
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-end;
+    justify-content: space-evenly;
+    height: 30vh;    
 }
 
-#table--row--cell {
- 
+.main-menu--right {
+    width: 50%;
+    flex-direction: column;    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* table style - Begin */
+.main-menu--bottom { 
+    display: flex; 
+    justify-content: flex-end;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
 
-/* table style - End */
+.main-menu--top {
+    display: flex;
+    flex-direction: row;
+}
 
+.main-menu-left-rows {
+    min-width: 10vw;    
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: #22ea04;
+}
 
+.main-menu--right-top {
+    color: #ff8925;
+}
+
+.main-menu--right-bottom {
+    margin-top: 2vh;
+}
+
+.btn {
+    background-color: #08071f;
+    border: 1px solid #ff8925;
+    border-radius: 25px;
+    color: #f5f7b6;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.25em;    
+}
+
+.btn:hover {
+    box-shadow: #ff8925 1px 1px 2px;
+}
+
+.btn-left {
+    min-width: 100px;
+}
+
+.btn-right {
+    min-width: 100px; 
+}
+
+.icon {
+    font-size: 3em;
+}

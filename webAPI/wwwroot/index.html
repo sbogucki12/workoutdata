@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <link rel="stylesheet" href="./style/styles.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">    
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body>
-    <main>
-        <div id="index--main" class="index--main">
-            <div>
-                <a href="pages/runtable.html"><button>Run Table</button></a>
-                <a href="pages/about.html"><button>About</button></a>
-                <a href="pages/analytics.html"><button>Analytics</button></a>
-                <a href="pages/admin.html"><button>Admin</button></a>
+    <body>
+        <main class="container">
+            <div id="index--main" class="index--main">
+                <div class="main-menu--top">
+                    <div class="main-menu--left">
+                        <div class="main-menu-left-rows">
+                            <i class="fa-solid fa-chart-simple icon"></i>
+                            <a href="pages/analytics.html"><button class="btn btn-left">Analytics</button></a>
+                        </div>
+                        <div class="main-menu-left-rows">
+                            <i class="fa-regular fa-calendar icon"></i>
+                            <a href="pages/runtable.html"><button class="btn btn-left">Run History</button></a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="main-menu--right">
+                        <div class="main-menu--right-top">
+                            <i class="fa-solid fa-person-running icon"></i>
+                        </div>
+                        <div class="main-menu--right-bottom">
+                            <a href="pages/admin.html"><button class="btn btn-right">Add a Run</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="main-menu--bottom">
+                        <a href="pages/about.html"><button class="btn">About</button></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </main>    
-</body>
+        </main>
+        <script src="https://kit.fontawesome.com/8db165ecfc.js" crossorigin="anonymous"></script>
+    </body>
 </html>
