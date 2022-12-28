@@ -80,4 +80,16 @@ body {
 
 }
 
-/* addrun style - End */
+.addrun-success--label {
+    font-weight:bold;
+}
+
+.addrun-success--value {
+    font-weight: normal;
+    color: #236f65
+}
+
+.addrun-success-container {
+    align-items: flex-start;
+    
+}

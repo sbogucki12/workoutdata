@@ -122,7 +122,7 @@ function post() {
         referrer: 'no-referrer'
     }).then((response) => {
         if (response.ok) {
-            console.log(response);
+            window.location.href = "https://localhost:7002/pages/admin/addrun-success.html";
             return response.json();
         } else {
             console.log(response);
