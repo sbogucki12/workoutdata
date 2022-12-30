@@ -45,7 +45,24 @@ previousShoeAgeString = localStorage.getItem('shoeAge');
 previousShoeAgeInt = parseInt(previousShoeAgeString);
 shoeAgeSpan.append(previousShoeAgeInt);
 
-function post() {  
+
+
+
+
+function post() { 
+    let runduration = convertDurationtoSeconds(document.getElementById("duration").value);
+    let lengthvalue = document.getElementById("length").value;
+    let paceInSeconds = runduration / lengthvalue;
+    d = Number(paceInSeconds);
+
+    var m = Math.floor(d % 3600 / 60);
+    var s = Math.floor(d % 3600 % 60);
+
+    var mDisplay = m > 0 ? m : "";
+    var sDisplay = s > 0 ? s : "";
+
+    pacevalue = `1900-01-01T00:${mDisplay}:${sDisplay}`;
+
     let pw = document.getElementById("pw").value;
     let index = index3;
     let runId = runId3;
@@ -54,12 +71,12 @@ function post() {
     let length = document.getElementById("length").value;
     let runningEnv = "outdoor";
     let surface = document.getElementById("surface").value;
-    let pace = "1900-01-01T00:07:31";    
+    let pace = pacevalue;   
     let sleepToBedTime = "1900-01-01T" + document.getElementById("bedtime").value;
     let sleepWakeTime = "1900-01-01T" + document.getElementById("wakeup").value;
     let runListenedTo = "none";
     let temperature = 50;
-    let shoeAge = 22;
+    let shoeAge = parseInt(document.getElementById("shoeAge").value);
     let startTime = "1900-01-01T" + document.getElementById("starttime").value;;
 
     if (!document.getElementById("outdoor").checked) {
@@ -72,8 +89,8 @@ function post() {
     var totalsleep = wakeup - bedtime; 
 
     function msToTime(duration) {            
-            var minutes = Math.floor((duration / (1000 * 60)) % 60),
-            hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+        var minutes = Math.floor((duration / (1000 * 60)) % 60),
+        hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
         hours = (hours < 10) ? "0" + hours : hours;
         minutes = (minutes < 10) ? "0" + minutes : minutes;        
@@ -88,7 +105,7 @@ function post() {
     minutes = hoursdisplay.slice(3, 5);
     sleepHours = hour + "." + minutes; 
     time = sleepHours;  
-    
+
 
     var type = runningEnv;
 
@@ -129,31 +146,33 @@ function post() {
             return Promise.reject(response);
         }
     })
-}
+};
 
 let durationEl = document.getElementById("duration");
 
-durationEl.addEventListener("change", (e) => {
+durationEl.addEventListener("change", () => {
     let time = convertDurationtoSeconds(document.getElementById("duration").value);
-    let lengthvalue = document.getElementById("length").value; 
-    let paceInSeconds = time / lengthvalue; 
+    let lengthvalue = document.getElementById("length").value;
+    let paceInSeconds = time / lengthvalue;
     d = Number(paceInSeconds);
-    
+
     var m = Math.floor(d % 3600 / 60);
     var s = Math.floor(d % 3600 % 60);
-    
+
     var mDisplay = m > 0 ? m : "";
-    var sDisplay = s > 0 ? s : "";    
+    var sDisplay = s > 0 ? s : "";
 
     let paceEl = document.getElementById("pacedisplay");
     pacedisplay = paceEl.appendChild(document.createElement("span"));
     pacedisplay.textContent = `${mDisplay}:${sDisplay}`
 })
 
-function convertDurationtoSeconds(duration) {
-    const [hours, minutes, seconds] = duration.split(':');
-    return Number(hours) * 60 * 60 + Number(minutes) * 60 + Number(seconds);
+function convertDurationtoSeconds(paceduration) {
+    const [pacehours, paceminutes, paceseconds] = paceduration.split(':');
+    return Number(pacehours) * 60 * 60 + Number(paceminutes) * 60 + Number(paceseconds);
+    
 };
+
 
 
 

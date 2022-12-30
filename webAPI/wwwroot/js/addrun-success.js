@@ -28,9 +28,9 @@
                     length: row.length,
                     type: row.type,
                     surface: row.surface,
-                    pace: row.pace.slice(11)
+                    pace: row.pace.slice(14)
                 }));
-                console.log(data)
+                
                 var dateEl = document.getElementById("date");
                 var lengthEl = document.getElementById("length");
                 var durationEl = document.getElementById("duration");
