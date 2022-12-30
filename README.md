@@ -38,6 +38,8 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 ## TODO
 
+[   ] - Add tempature to run form
+
 [ X ] - Add functionality that calculates pace
 
 [ X ] - Add success/failure handling on form submit 
