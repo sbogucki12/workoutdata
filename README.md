@@ -44,7 +44,7 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
-# December 29, 2002
+# December 29, 2022
 
 * Form for adding runs now calculates pace from time and distance: 
 ![convert-pace-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/convert-pace-gif.gif "convert-pace-gif.gif")
