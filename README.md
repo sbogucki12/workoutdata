@@ -38,12 +38,16 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 ## TODO
 
-[ ] - Add functionality that calculates pace
+[ X ] - Add functionality that calculates pace
 
-[ ] - Add success/failure handling on form submit 
+[ X ] - Add success/failure handling on form submit 
 
 # Progress...
 
+# December 29, 2002
+
+* Form for adding runs now calculates pace from time and distance: 
+![convert-pace-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/convert-pace-gif.gif "convert-pace-gif.gif")
 
 # December 28, 2022: 
 

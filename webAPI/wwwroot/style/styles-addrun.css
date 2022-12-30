@@ -33,6 +33,9 @@ body {
     padding-left: 2vw;
     align-items: flex-start;
     border-end-end-radius: 25px;
+    height: 5vh;
+    display: flex; 
+    justify-content: center; 
 }
 
 .container {

@@ -6,11 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Josefin+Sans&display=swap" rel="stylesheet">    
     <meta charset="utf-8" />
-    <title></title>
+    <title>bogoodski - run log || Add Run ||</title>
 </head>
 <body>
     <div class="header">
-        <h1>Add a Run</h1>
+        <div>
+            <h1>Add a Run</h1>
+        </div>        
     </div>
     <div class="container">
         <div class="form">
@@ -26,7 +28,7 @@
                        id="length"
                        name="length"
                        step="0.01"
-                       placeholder="12.56"><br>
+                       placeholder="00.00"><br>
 
                 <label for="duration">Duration:</label><br>
                 <input type="text" id="duration"
@@ -36,6 +38,10 @@
                        onkeypress="return /[0-9\:]/i.test(event.key)"
                        maxlength="8"
                        size="4"><br>
+                <br/>
+                <span id="pacedisplay">Pace: </span>
+                <br/>
+                <br/>
 
                 <label for="surface">Surface:</label><br>
                 <input type="text"
@@ -79,7 +85,7 @@
         <script src="https://code.jquery.com/jquery-3.6.1.js"
                 integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
                 crossorigin="anonymous"></script>
-        <script src="../../js/admin.js"></script>
+        <script src="../../js/addrun.js"></script>
         <script src="https://kit.fontawesome.com/8db165ecfc.js" crossorigin="anonymous"></script>
     </div>
         <div class="container--back-button">

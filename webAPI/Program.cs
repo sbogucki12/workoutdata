@@ -33,6 +33,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseStatusCodePagesWithRedirects("/pages/errors/error.html");
 
 app.UseAuthorization();
 
