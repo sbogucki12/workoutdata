@@ -46,6 +46,11 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 # Progress...
 
+# December 30, 2022
+
+* Implementing pagination... 
+![pagination-step-one-gif.gif](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/pagination-step-one-gif.gif "pagination-step-one-gif.gif")
+
 # December 29, 2022
 
 * Form for adding runs now calculates pace from time and distance: 

@@ -64,7 +64,9 @@ namespace runlog2023.Controllers
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
-                        string commandtext = $"SELECT TOP {numberOfRuns} * FROM [bogoodski].[runlog_data] ORDER BY runId DESC";
+                        //string commandtext = $"SELECT TOP {numberOfRuns} * FROM [bogoodski].[runlog_data] ORDER BY runId DESC";
+
+                        string commandtext = $"DECLARE @maxId AS BIGINT\r\nSELECT @maxId=Max(runId)\r\nFROM [bogoodski].[runlog_data];\r\n\r\nSELECT * FROM [bogoodski].[runlog_data] WHERE [runId] > @maxId - {numberOfRuns} ORDER BY [date] DESC;";
 
                         SqlCommand cmd = new SqlCommand(commandtext, conn);
 
