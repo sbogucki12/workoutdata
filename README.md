@@ -4,6 +4,10 @@
 
 I want to rebuild [www.dailyrun.net](https://www.dailyrun.net/). 
 
+When I initially learned how to use .NET, I immediately used Entity Framework and, later, other ORMs to interact with databases.  So, I am using this personal side project to learn how to work databases in .NET more directly. 
+
+Similarly, it's been so long since I've used JavaScript without react that I need to re-learn vanilla JavaScript.  Reintroducing myself to JavaScript is the second desired outcome here.  
+
 ### Problem
 
 The data in my runlog, as seen via the UI, isn't what it appears to be...
