@@ -4,7 +4,7 @@ async function getRun() {
         data = JSON.stringify(secret);
         token = data.slice(13, 25);
 
-        fetch('https://localhost:7002/Run/GetRuns?' + new URLSearchParams({
+        fetch('https://localhost:7002/Run/Get?' + new URLSearchParams({
             numberOfRuns: 1
         }),
             {
@@ -128,7 +128,7 @@ function post() {
         "startTime": startTime
     }
 
-    fetch('https://localhost:7002/Run/PostRun', {
+    fetch('https://localhost:7002/Run/Post', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: {
             'Accept': '*/*',

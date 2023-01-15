@@ -38,13 +38,19 @@ My runlog is dated, so it needs to be revised.  I want to take the opportunity i
 
 ## TODO
 
-[   ] - Add tempature to run form
+[   ] - Add temperature to run form
 
 [ X ] - Add functionality that calculates pace
 
 [ X ] - Add success/failure handling on form submit 
 
 # Progress...
+
+# January 14, 2023
+
+* Debugging: WebAPI had exception when trying to return all records.  I hadn't been checking for null values in the data coming from the database.  null values throw exceptions.  Modified code to handle null values. 
+![webapi-stackoverflow-solution.jpg](https://raw.githubusercontent.com/sbogucki12/workoutdata/main/images/webapi-stackoverflow-solution.jpg "webapi-stackoverflow-solution.jpg")
+
 
 # December 30, 2022
 

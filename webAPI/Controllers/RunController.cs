@@ -4,7 +4,9 @@ using Microsoft.Extensions.Configuration;
 using runlog2023.models;
 using System;
 using System.Data;
+using System.Numerics;
 using System.Reflection;
+using System.Reflection.PortableExecutable;
 
 namespace runlog2023.Controllers
 {
@@ -24,8 +26,8 @@ namespace runlog2023.Controllers
         }
 
         [HttpPost]
-        [Route("GetRuns")]
-        public IActionResult GetRuns([FromBody]string pw, int numberOfRuns)
+        [Route("Get")]
+        public IActionResult Get([FromBody]string pw, int offset, int limit)
         {
             
             bool auth = false; 
@@ -66,35 +68,42 @@ namespace runlog2023.Controllers
                         conn.Open();
                         //string commandtext = $"SELECT TOP {numberOfRuns} * FROM [bogoodski].[runlog_data] ORDER BY runId DESC";
 
-                        string commandtext = $"DECLARE @maxId AS BIGINT\r\nSELECT @maxId=Max(runId)\r\nFROM [bogoodski].[runlog_data];\r\n\r\nSELECT * FROM [bogoodski].[runlog_data] WHERE [runId] > @maxId - {numberOfRuns} ORDER BY [date] DESC;";
+                        string FirstOrNext = "FIRST";
+
+                        if (offset > 0)
+                        {
+                            FirstOrNext = "NEXT";
+                        }
+
+
+                        string commandtext = $"SELECT * FROM [bogoodski].[runlog_data] ORDER BY date DESC OFFSET {offset} ROWS FETCH {FirstOrNext} {limit} ROWS ONLY; ";
 
                         SqlCommand cmd = new SqlCommand(commandtext, conn);
 
-                        var reader = cmd.ExecuteReader();
+                        var reader = cmd.ExecuteReader();                        
 
                         while (reader.Read())
-                        {
+                        {                            
                             var run = new Run()
                             {
-                                index = reader.GetInt64(0),
-                                runId = reader.GetInt64(1),
-                                date = reader.GetDateTime(2),
-                                duration = reader.GetDateTime(3),
-                                length = reader.GetDouble(4),
-                                type = reader.GetString(5),
-                                surface = reader.GetString(6),
-                                pace = reader.GetDateTime(7),
-                                sleepHours = reader.GetDouble(8),
-                                sleepToBedTime = reader.GetDateTime(9),
-                                sleepWakeTime = reader.GetDateTime(10),
-                                runListenedTo = reader.GetString(11),
-                                temperature = reader.GetDouble(12),
-                                shoeAge = reader.GetInt64(13),
-                                startTime = reader.GetDateTime(14)
+                                index = reader.IsDBNull(0) ? null : reader.GetInt64(0),
+                                runId = reader.IsDBNull(1) ? null : reader.GetInt64(1),
+                                date = reader.IsDBNull(2) ? null : reader.GetDateTime(2),
+                                duration = reader.IsDBNull(3) ? null : reader.GetDateTime(3),
+                                length = reader.IsDBNull(4) ? null : reader.GetDouble(4),
+                                type = reader.IsDBNull(5) ? null : reader.GetString(5),
+                                surface = reader.IsDBNull(6) ? null : reader.GetString(6),
+                                pace = reader.IsDBNull(7) ? null : reader.GetDateTime(7),
+                                sleepHours = reader.IsDBNull(8) ? null : reader.GetDouble(8),
+                                sleepToBedTime = reader.IsDBNull(9) ? null : reader.GetDateTime(9),
+                                sleepWakeTime = reader.IsDBNull(10) ? null : reader.GetDateTime(10),
+                                runListenedTo = reader.IsDBNull(11) ? null : reader.GetString(11),
+                                temperature = reader.IsDBNull(12) ? null : reader.GetDouble(12),
+                                shoeAge = reader.IsDBNull(13) ? null : reader.GetInt64(13),
+                                startTime = reader.IsDBNull(14) ? null : reader.GetDateTime(14)
                             };
 
                             runs.Add(run);
-
                         }
                     }
 
@@ -105,8 +114,9 @@ namespace runlog2023.Controllers
 
                     return NoContent();
                 }
+
                 catch (Exception ex)
-                {
+                {                  
                     return Unauthorized(ex);
                 }
             }
@@ -117,8 +127,8 @@ namespace runlog2023.Controllers
         }
 
         [HttpPost]
-        [Route("PostRun")]
-        public IActionResult PostRun([FromBody]RunWithAuth data)
+        [Route("Post")]
+        public IActionResult Post([FromBody]RunWithAuth data)
         {
             
             try

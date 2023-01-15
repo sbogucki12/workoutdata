@@ -3,7 +3,7 @@
         data = JSON.stringify(secret);
         token = data.slice(13, 25);
 
-        fetch('https://localhost:7002/Run/GetRuns?' + new URLSearchParams({
+        fetch('https://localhost:7002/Run/Get?' + new URLSearchParams({
             numberOfRuns: 1
         }),
             {

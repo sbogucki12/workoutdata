@@ -30,12 +30,7 @@
     main.append(tbl);
 }
 
-function setAdditionalRows(data) {    
-    numberOfRuns = parseInt(localStorage.getItem('counter')) - 5;   
-    counter = parseInt(localStorage.getItem('counter'));
-    data = data.slice(numberOfRuns, counter);
-    localStorage.setItem('counter', counter);
-    
+function setAdditionalRows(data) {        
     displayData = data.map(row => ({
         Date: row.date.slice(0, 10),
         Duration: row.duration.slice(11),
@@ -61,13 +56,14 @@ function setAdditionalRows(data) {
     main.append(tbl);
 }
 
-function getRuns(numberOfRuns, initial) {
+function getRuns(offset, limit, phase) {
     $.getJSON("../secret.json").then((secret) => {
         data = JSON.stringify(secret);
         token = data.slice(13, 25);
 
-        fetch('https://localhost:7002/Run/GetRuns?' + new URLSearchParams({
-            numberOfRuns: numberOfRuns
+        fetch('https://localhost:7002/Run/Get?' + new URLSearchParams({
+            offset: offset, 
+            limit: limit
         }),
             {
                 method: 'POST',
@@ -85,29 +81,48 @@ function getRuns(numberOfRuns, initial) {
                     return Promise.reject(response);
                 }
             }).then((data) => {
-                if (initial) {                    
+                if (phase == 'initial') {                    
                     setInitialTable(data);
-                } else {                  
+                }
+
+                if(phase == 'fivemore') {                  
                     setAdditionalRows(data);
-                }                
+                } 
+                if (phase == 'showmore') {
+                    console.log(data.length)
+                    setAdditionalRows(data);
+                }
+                if (phase == 'showrecent') {
+           
+                    setInitialTable(data);
+                }
             }).catch((err) => {
                 console.warn('Something went wrong: ', err)
             })
     });
 }
 
-localStorage.setItem('counter', 5);
+localStorage.setItem('offset', 0);
 
 $(document).ready(function () { 
-    counter = parseInt(localStorage.getItem('counter'));
-    getRuns(counter, true);
+    offset = 0;
+    getRuns(offset, 5, 'initial');
 });
 
-
-
-$('#btn-fivemore').click(() => {
-    counter = parseInt(localStorage.getItem('counter'));
-    counter = counter + 5; 
-    localStorage.setItem('counter', counter);
-    getRuns(counter, false);
+$('#btn-fivemore').click(() => { 
+    getRuns(offset, 5, 'fivemore');
+    offsetPlusFive = offset + 5;
+    localStorage.setItem('offset', offsetPlusFive);
 });
+
+$('#btn-showmore').click(() => {
+    getRuns(offset, 5000, 'showmore');
+    
+})
+
+$('#btn-showFiveLess').click(() => {
+    offset = parseInt(localStorage.getItem('offset'));
+    getRuns(offset, 5, 'showrecent');
+    counter = 5; 
+    localStorage.setItem('counter', counter); 
+})
