@@ -3,11 +3,15 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-
+./webAPI/wwwroot/secret.js*
+./webAPI/wwwroot/pages/secret.js*
+secret.js*
 ./webAPI/wwwroot/secret.json
 ./webAPI/wwwroot/pages/secret.json
 secret.json
-
+./webAPI/wwwroot/secret.js
+./webAPI/wwwroot/pages/secret.js
+secret.js
 
 # User-specific files
 *.rsuser
